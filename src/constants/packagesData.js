@@ -1,5 +1,8 @@
 // Story Writing
 const storyWritingSilverData = {
+  name: "Story Writing For Kids",
+  extraPrice: 10,
+  extraLimit: 100,
   title: "Silver",
   services: ["7 Days Delivery", "5 Revision", "Up to 1000 Words (optional)"],
   price: 99,
@@ -10,6 +13,9 @@ const storyWritingSilverData = {
 };
 
 const storyWritingGoldData = {
+  name: "Story Writing For Kids",
+  extraPrice: 10,
+  extraLimit: 100,
   title: "Gold",
   services: ["10 Days Delivery", "7 Revision", "Up to 2000 Words (optional)"],
   price: 149,
@@ -20,6 +26,9 @@ const storyWritingGoldData = {
 };
 
 const storyWritingPlatinumData = {
+  name: "Story Writing For Kids",
+  extraPrice: 10,
+  extraLimit: 100,
   title: "Platinum",
   services: [
     "14 Days Delivery",
@@ -39,6 +48,9 @@ const storyWritingPlatinumData = {
 // 2)Children’s book designing
 
 const bookCoverPlatinumData = {
+  name: "Children’s book designing",
+  extraPrice: 10,
+  extraLimit: 100,
   title: "Platinum",
   services: [
     "Front & Back cover",
@@ -62,6 +74,9 @@ const bookCoverPlatinumData = {
 };
 
 const bookCoverSilverData = {
+  name: "Children’s book designing",
+  extraPrice: 10,
+  extraLimit: 100,
   title: "Silver",
   services: [
     "Front cover",
@@ -81,6 +96,9 @@ const bookCoverSilverData = {
 };
 
 const bookCoverGoldData = {
+  name: "Children’s book designing",
+  extraPrice: 0,
+  extraLimit: 0,
   title: "Gold",
   services: [
     "Front & Back cover",
@@ -101,6 +119,9 @@ const bookCoverGoldData = {
 };
 
 const bookInteriorColoringData = {
+  name: "Children’s book designing",
+  extraPrice: 30,
+  extraLimit: 1,
   title: "Coloring Book",
   services: [
     "Up to 25 pages(optional)",
@@ -123,6 +144,9 @@ const bookInteriorColoringData = {
 };
 
 const bookInteriorEbookData = {
+  name: "Children’s book designing",
+  extraPrice: 30,
+  extraLimit: 1,
   title: "EBook",
   services: [
     "Up to 15 pages or 8 Spread (optional)",
@@ -146,6 +170,9 @@ const bookInteriorEbookData = {
 };
 
 const bookInteriorPaperbackgData = {
+  name: "Children’s book designing",
+  extraPrice: 30,
+  extraLimit: 1,
   title: "Paper Back",
   services: [
     "Up to 40 pages or 20 Spread (optional)",
@@ -172,6 +199,9 @@ const bookInteriorPaperbackgData = {
 };
 
 const bookFullandFlaggerData = {
+  name: "Children’s book designing",
+  extraPrice: 30,
+  extraLimit: 1,
   title: "Full and Flagger",
   services: [
     "60 Days Delivery",
@@ -213,6 +243,9 @@ const bookFullandFlaggerData = {
 // 3)Book Layout Design
 
 const bookLayoutSilverData = {
+  name: "Book Layout Design",
+  extraPrice: 1,
+  extraLimit: 1,
   title: "Silver",
   services: [
     "5 Days Delivery",
@@ -236,6 +269,9 @@ const bookLayoutSilverData = {
 };
 
 const bookLayoutGoldData = {
+  name: "Book Layout Design",
+  extraPrice: 1,
+  extraLimit: 1,
   title: "Gold",
   services: [
     "4 Days Delivery",
@@ -259,6 +295,9 @@ const bookLayoutGoldData = {
 };
 
 const bookLayoutPlatinumData = {
+  name: "Book Layout Design",
+  extraPrice: 1,
+  extraLimit: 1,
   title: "Platinum",
   services: [
     "5 Days Delivery",
@@ -284,6 +323,9 @@ const bookLayoutPlatinumData = {
 // 4)Perfectly Publishing on Amazon KDP
 
 const amazonPubishingData = {
+  name: "Perfectly Publishing on Amazon KDP",
+  extraPrice: 4,
+  extraLimit: 1,
   title: "Publishing",
   services: [
     "7 Days Delivery",
@@ -304,6 +346,9 @@ const amazonPubishingData = {
 };
 
 const amazonPubishingCampaignData = {
+  name: "Perfectly Publishing on Amazon KDP",
+  extraPrice: 4,
+  extraLimit: 1,
   title: "Publishing",
   services: [
     "20 Days Delivery",
@@ -334,6 +379,9 @@ const amazonPubishingCampaignData = {
 // Video Animation
 
 const videoSilverData = {
+  name: "Video Animation",
+  extraPrice: 1,
+  extraLimit: 1,
   title: "Silver",
   services: [
     "Up to 60 Seconds Running Time (optional)",
@@ -349,6 +397,9 @@ const videoSilverData = {
 };
 
 const videoGoldData = {
+  name: "Video Animation",
+  extraPrice: 1,
+  extraLimit: 1,
   title: "Gold",
   services: [
     "Up to 60 Seconds Running Time (optional)",
@@ -367,6 +418,9 @@ const videoGoldData = {
 };
 
 const videoPlatinumData = {
+  name: "Video Animation",
+  extraPrice: 1,
+  extraLimit: 1,
   title: "Platinum",
   services: [
     "Up to 60 Seconds Running Time (optional)",
@@ -389,6 +443,9 @@ const videoPlatinumData = {
 // 6)YouTube Video Content Creation
 
 const youtubeSilverData = {
+  name: "YouTube Video Content Creation",
+  extraPrice: 1,
+  extraLimit: 1,
   title: "Silver",
   services: [
     "3 days",
@@ -410,6 +467,9 @@ const youtubeSilverData = {
 };
 
 const youtubeGoldData = {
+  name: "YouTube Video Content Creation",
+  extraPrice: 1,
+  extraLimit: 1,
   title: "Gold",
   services: [
     "5 days",
@@ -432,6 +492,9 @@ const youtubeGoldData = {
 };
 
 const youtubePlatinumData = {
+  name: "YouTube Video Content Creation",
+  extraPrice: 1,
+  extraLimit: 1,
   title: "Platinum",
   services: [
     "8 days",

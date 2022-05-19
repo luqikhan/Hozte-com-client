@@ -3,7 +3,7 @@ import { CommonHero } from "../components";
 import { toast } from "react-toastify";
 import { Formik, FieldArray } from "formik";
 import * as Yup from "yup";
-import axios from "axios";
+import axios from "../utils/axios";
 
 function ServiceCheck(props) {
   const { value, text, labelFor, onChange, checked, id } = props;
@@ -101,7 +101,8 @@ function GetAQuote() {
       {/* <!-- Contact Start --> */}
       <section className="contact-section">
         <div className="container">
-          <div className="row contact-form">
+          <div className="contact-form">
+          <div className="row">
             <div className="col-md-4">
               <div className="contact--info-area">
                 <h3>Interested!</h3>
@@ -129,19 +130,16 @@ function GetAQuote() {
                       addtionalInformation,
                     } = values;
                     try {
-                      const response = await axios.post(
-                        "http://localhost:5000/getaquote/api",
-                        {
-                          email,
-                          firstName,
-                          lastName,
-                          phone,
-                          country,
-                          businessNature,
-                          services,
-                          addtionalInformation,
-                        }
-                      );
+                      const response = await axios.post("/getaquote/api", {
+                        email,
+                        firstName,
+                        lastName,
+                        phone,
+                        country,
+                        businessNature,
+                        services,
+                        addtionalInformation,
+                      });
 
                       toast.success(response.data.message, {
                         position: toast.POSITION.TOP_RIGHT,
@@ -150,14 +148,9 @@ function GetAQuote() {
                       formikActions.setSubmitting(false);
                       formikActions.resetForm({});
                     } catch (error) {
-                      toast.error(
-                        error.response && error.response.data.message
-                          ? error.response.data.message
-                          : error.message,
-                        {
-                          position: toast.POSITION.TOP_RIGHT,
-                        }
-                      );
+                      toast.error(error.message, {
+                        position: toast.POSITION.TOP_RIGHT,
+                      });
                     }
                   }}
                 >
@@ -332,6 +325,7 @@ function GetAQuote() {
                 </Formik>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </section>

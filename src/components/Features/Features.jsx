@@ -21,7 +21,7 @@ function AnchorLink(props) {
 }
 
 function TextSection(props) {
-  const { title, text, id, active, labeledBy, itemNumber } = props;
+  const { title, text, id, active, labeledBy, itemNumber, image } = props;
   return (
     <>
       <div
@@ -32,12 +32,16 @@ function TextSection(props) {
       >
         <div className="row align-items-center">
           <div className="col-lg-6">
-            <div
-              className="appie-features-thumb text-center wow animated fadeInUp"
-              data-wow-duration="2000ms"
-              data-wow-delay="200ms"
-            >
-              <img src="assets/images/features-thumb-1.png" alt="" />
+            <div className="appie-hero-thumb">
+              <div className="thumb">
+                <div
+                  className="appie-features-thumb text-center wow animated fadeInUp"
+                  data-wow-duration="2000ms"
+                  data-wow-delay="200ms"
+                >
+                  <img src={image} alt="features-img" />
+                </div>
+              </div>
             </div>
           </div>
           <div className="col-lg-6">
@@ -48,12 +52,7 @@ function TextSection(props) {
             >
               <span>Step: {itemNumber}</span>
               <h3 className="title">{title}</h3>
-              <p>
-                Reserve your spot by filling a simple brief form, and be
-                instantly welcomed by one of our cordial project managers who
-                will take in all the information you have to share about your
-                book.
-              </p>
+              <p>{text}</p>
               <Anchor className="animated_btn" href="#">
                 Learn More
               </Anchor>
@@ -70,8 +69,11 @@ const Features = () => {
     <section className="appie-features-area pt-40 " id="features">
       <div className="container">
         <div className="appie-section-title text-center">
-          <h3 className="appie-title">How order will proceed</h3>
-          <p>Our 6 Steps for order processing.</p>
+          <h3 className="appie-title">
+            How your children’s book
+            <br /> will proceed.
+          </h3>
+          <p>Our 5 Steps for order processing.</p>
         </div>
         <div className="row align-items-center pt-45">
           <div className="col-lg-3">
@@ -92,39 +94,32 @@ const Features = () => {
                   id="v-pills-research-tab"
                 />
                 <AnchorLink
-                  title="Think"
+                  title="Designing"
                   itemNumber="2"
                   control="v-pills-think"
                   href="#v-pills-think"
                   id="v-pills-think-tab"
                 />
                 <AnchorLink
-                  title="Explore"
+                  title="Coloring"
                   itemNumber="3"
                   control="v-pills-explore"
                   href="#v-pills-explore"
                   id="v-pills-explore-tab"
                 />
                 <AnchorLink
-                  title="Execute"
+                  title="Formating"
                   itemNumber="4"
                   control="v-pills-execute"
                   href="#v-pills-execute"
                   id="v-pills-execute-tab"
                 />
                 <AnchorLink
-                  title="Test"
+                  title="Publishing"
                   itemNumber="5"
                   control="v-pills-test"
                   href="#v-pills-test"
                   id="v-pills-test-tab"
-                />
-                <AnchorLink
-                  title="Launch"
-                  itemNumber="6"
-                  control="v-pills-launch"
-                  href="#v-pills-launch"
-                  id="v-pills-launch-tab"
                 />
               </div>
             </div>
@@ -137,37 +132,42 @@ const Features = () => {
                 labeledBy="v-pills-research-tab"
                 title="Research"
                 itemNumber="01"
+                image="assets/images/research.png"
+                text="We will research on given topic and then we'll write description for your children's book."
               />
               <TextSection
                 id="v-pills-think"
                 labeledBy="v-pills-think-tab"
-                title="Think"
+                title="Designing"
                 itemNumber="02"
+                image="assets/images/designing.png"
+                text="After approval of the description content, we will provide you the sketch of the first page, multiple revisions can be made in the sketch according to the requirement."
               />
               <TextSection
                 id="v-pills-explore"
                 labeledBy="v-pills-explore-tab"
-                title="Explore"
+                title="Coloring"
                 itemNumber="03"
+                image="assets/images/coloring.png"
+                text="After approval of the skecth, we will fill colors in the sketch with limited revisions."
               />
               <TextSection
                 id="v-pills-execute"
                 labeledBy="v-pills-execute-tab"
-                title="Execute"
+                title="Formating"
+                image="assets/images/Formating.png"
                 itemNumber="04"
+                text="We will format the book according to the Amazon requirments. Multiple formats can be prepared if you want to print it to some other places."
               />
               <TextSection
                 id="v-pills-test"
                 labeledBy="v-pills-test-tab"
-                title="Test"
+                title="Publishing"
                 itemNumber="05"
+                image="assets/images/publishing.png"
+                text="We will do complete research on Amazon KDP for Cover photo, SEO, Printing and Publishing of your Book."
               />
-              <TextSection
-                id="v-pills-launch"
-                labeledBy="v-pills-launch-tab"
-                title="Launch"
-                itemNumber="06"
-              />
+              
             </div>
           </div>
         </div>

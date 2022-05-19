@@ -1,6 +1,5 @@
 import React from "react";
-import { GiNotebook } from "react-icons/gi";
-import { FaAmazon, FaPencilAlt, FaBook } from "react-icons/fa";
+import { FaBook } from "react-icons/fa";
 const Services = () => {
   return (
     // <!--====== APPIE SERVICES PART START ======-->
@@ -23,7 +22,11 @@ const Services = () => {
               data-wow-delay="200ms"
             >
               <div className="icon">
-                <FaPencilAlt size={24} color="#fff" />
+                <img
+                  src="assets/images/icon/content_writing.png"
+                  alt="service-icon"
+                />
+                {/* <FaPencilAlt size={24} color="#fff" /> */}
                 <span>1</span>
               </div>
               <h4 className="appie-title">Story writing for kids</h4>
@@ -39,7 +42,12 @@ const Services = () => {
               data-wow-delay="400ms"
             >
               <div className="icon">
-                <GiNotebook size={24} color="#fff" />
+                <img
+                  src="assets/images/icon/children_book_designing.png"
+                  alt="service-icon"
+                />
+
+                {/* <GiNotebook size={24} color="#fff" /> */}
                 <span>2</span>
               </div>
               <h4 className="appie-title">Children Book Designing</h4>
@@ -69,13 +77,17 @@ const Services = () => {
               data-wow-delay="800ms"
             >
               <div className="icon">
-                <FaAmazon size={24} color="#fff" />
+                <img
+                  src="assets/images/icon/publishing.png"
+                  alt="service-icon"
+                />
+                {/* <FaAmazon size={24} color="#fff" /> */}
                 <span>4</span>
               </div>
               <h4 className="appie-title">
                 Perfectly Publishing on Amazon KDP
               </h4>
-              <p>Mucker plastered bugger all mate morish are.</p>
+              <p>We will take your manuscript and turn it into the best...</p>
             </div>
           </div>
         </div>

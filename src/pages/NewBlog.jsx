@@ -2,7 +2,7 @@ import React from "react";
 import { toast } from "react-toastify";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import axios from "axios";
+import axios from "../utils/axios";
 
 const NewBlog = () => {
   const orderInfo = {
@@ -38,7 +38,7 @@ const NewBlog = () => {
                       formData.append("title", title);
                       formData.append("content", content);
                       const response = await axios.post(
-                        "http://localhost:5000/blogs/api/create-post",
+                        "/blogs/api/create-post",
                         formData
                       );
 
@@ -49,14 +49,9 @@ const NewBlog = () => {
                       formikActions.setSubmitting(false);
                       formikActions.resetForm({});
                     } catch (error) {
-                      toast.error(
-                        error.response && error.response.data.message
-                          ? error.response.data.message
-                          : error.message,
-                        {
-                          position: toast.POSITION.TOP_RIGHT,
-                        }
-                      );
+                      toast.error(error.message ? error.message : error, {
+                        position: toast.POSITION.TOP_RIGHT,
+                      });
                     }
                   }}
                 >
@@ -70,7 +65,7 @@ const NewBlog = () => {
                     setFieldValue,
                     handleSubmit,
                   }) => {
-                    const { title, content, postImage } = values;
+                    const { title, content } = values;
                     return (
                       <form
                         onSubmit={handleSubmit}
@@ -119,13 +114,18 @@ const NewBlog = () => {
                               );
                             }}
                           />
+                          {touched.postImage && errors.postImage && (
+                            <div className="text-danger mb-1">
+                              {errors.postImage}
+                            </div>
+                          )}
                         </div>
 
                         <div className="col-md-6">
                           <input
                             type="submit"
                             name="submit"
-                            value={isSubmitting ? "Loading" : "Create Post"}
+                            value={isSubmitting ? "Loading..." : "Create Post"}
                             disabled={isSubmitting}
                           />
                         </div>

@@ -7,10 +7,10 @@ import ServicesSection from "./Services/Services";
 import FeaturesSection from "./Features/Features";
 import FeaturesSection2 from "./Features/Features2";
 import FeaturesSection3 from "./Features/Feature3";
-import FaqsSection from "./FAQ/Faqs";
 import ServiceCard1 from "./Services/ServiceCard1";
 import Footer from "./Footer/Footer";
 import Table from "./Table/Table";
+import CommonTable from "./Table/CommonTable";
 import Anchor from "./Anchor/Anchor";
 import Checkout from "./Checkout/Checkout";
 import Success from "./Checkout/Success";
@@ -20,11 +20,14 @@ import PricingCard from "./Pricing/PricingCard";
 import BlogCard from "./Blogs/BlogCard";
 import RecentSection from "./Blogs/RecentSection";
 import PreLoader from "./PreLoad/Loader";
+import Spinner from "./Spinner/Spinner";
+import ScrollToTop from "./ScrollToTop";
+import Faqs1 from "./FAQ/Faqs1";
 
 export {
   Navbar,
   HeroSection,
-  FaqsSection,
+  CommonTable,
   PreLoader,
   Footer,
   ServiceCard1,
@@ -43,5 +46,8 @@ export {
   BlogCard,
   RecentSection,
   Cancel,
+  Spinner,
   WhatsappButton,
+  ScrollToTop,
+  Faqs1,
 };

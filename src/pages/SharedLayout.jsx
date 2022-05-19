@@ -1,5 +1,5 @@
-import React from "react";
-import { Navbar, Footer, StyledNavbar } from "../components";
+import React  from "react";
+import { Footer, StyledNavbar } from "../components";
 import { Outlet } from "react-router-dom";
 
 function SharedLayout() {

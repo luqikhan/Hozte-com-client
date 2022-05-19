@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function BlogCard(props) {
-  const { title, date, id, image, totalComment } = props;
+  const { title, date, id, image, totalComment, removePost, loading } = props;
+  const isAuthenticated = localStorage.getItem("token");
 
   return (
     <div className="col-lg-6">
@@ -22,9 +23,22 @@ function BlogCard(props) {
           <h3>
             <Link to={`/blogs/${id}`}>{title}</Link>
           </h3>
-          <Link className="read-more" to={`/blogs/${id}`}>
-            Read More<i className="fal fa-arrow-right"></i>
-          </Link>
+
+          <div className="row justify-content-between align-items-center">
+            <Link className="read-more" to={`/blogs/${id}`}>
+              Read More<i className="fal fa-arrow-right"></i>
+            </Link>
+            {isAuthenticated ? (
+              <button
+                type="button"
+                disabled={loading}
+                onClick={() => removePost(id)}
+                className="btn btn-outline-danger btn-sm"
+              >
+                {loading ? "Loading..." : "Delete"}
+              </button>
+            ) : null}
+          </div>
         </div>
       </div>
     </div>

@@ -23,13 +23,12 @@ const Navbar = () => {
             <div className="col-12">
               <div className="offcanvas_menu_wrapper">
                 <div className="canvas_close">
-                  {/* <Anchor href="javascript:void(0)"> important to change later*/}
-                  <Anchor href="#">
+                  <Anchor href="#" onClick={(e) => e.preventDefault()}>
                     <i className="fa fa-times"></i>
                   </Anchor>
                 </div>
                 <div className="offcanvas-brand text-center mb-40">
-                  {/* <img src="assets/images/logo.png" alt="logo-png" /> */}
+                  <img src="assets/images/logo.png" alt="logo-png" style={{ height: 64,}}/>
                 </div>
                 <div id="menu" className="text-left ">
                   <ul className="offcanvas_main_menu">
@@ -78,10 +77,10 @@ const Navbar = () => {
 
                     {/* packages start */}
                     <li className="menu-item-has-children">
-                      <NavLink to="/packages/bookdesigning">Packages</NavLink>
+                      <NavLink to="/packages/storywriting">Packages</NavLink>
                       <ul className="sub-menu">
                         <li>
-                          <NavLink to="packages/storywriting">
+                          <NavLink to="/packages/storywriting">
                             Story writing for kids
                           </NavLink>
                         </li>
@@ -113,6 +112,10 @@ const Navbar = () => {
                       </ul>
                     </li>
                     {/* packages end */}
+
+                    <li className="menu-item-has-children">
+                      <NavLink to="/blogs">Blog</NavLink>
+                    </li>
 
                     <li className="menu-item-has-children">
                       <NavLink to="contactus">Contact Us</NavLink>
@@ -182,13 +185,12 @@ const Navbar = () => {
             <div className="row align-items-center">
               <div className="col-lg-2 col-md-4 col-sm-5 col-6 order-1 order-sm-1">
                 <div className="appie-logo-box">
-                  <NavLink
-                    to="/"
-                    style={({ isActive }) => {
-                      return { color: isActive ? "red" : "black" };
-                    }}
-                  >
-                    <img src="assets/images/logo.png" alt="logo-png" />
+                  <NavLink to="/">
+                    <img
+                      src="assets/images/logo.png"
+                      alt="logo-png"
+                      style={{ height: 64 }}
+                    />
                   </NavLink>
                 </div>
               </div>

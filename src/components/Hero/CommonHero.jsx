@@ -11,8 +11,8 @@ function CommonHero(props) {
             <div className="col-lg-6">
               <div className="appie-section-title text-center">
                 <h3 className="appie-title">{title}</h3>
-                <h6>
-                  HOME / <span>{pageTitle}</span>
+                <h6 className="sub-title">
+                  HOME / <span className="span">{pageTitle}</span>
                 </h6>
               </div>
             </div>

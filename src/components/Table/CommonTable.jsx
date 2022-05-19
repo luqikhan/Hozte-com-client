@@ -4,9 +4,8 @@ import { useTable, useGlobalFilter, usePagination } from "react-table";
 
 import { GlobalFilter } from "./FilteringTable";
 
-function TableStructure({ columns, data, updateMyData, skipPageReset }) {
+function TableStructure({ columns, data }) {
   // Use the state and functions returned from useTable to build your UI
-
   const {
     getTableProps,
     headerGroups,
@@ -26,9 +25,6 @@ function TableStructure({ columns, data, updateMyData, skipPageReset }) {
     {
       columns,
       data,
-      updateMyData,
-      skipPageReset,
-      autoResetPage: !skipPageReset,
     },
     useGlobalFilter,
     usePagination
@@ -152,22 +148,10 @@ function TableStructure({ columns, data, updateMyData, skipPageReset }) {
   );
 }
 
-function TableComponent({
-  columns,
-  data,
-  setOrders,
-  updateMyData,
-  skipPageReset,
-}) {
+function TableComponent({ columns, data }) {
   return (
     <div className="mt-20 mb-20">
-      <TableStructure
-        columns={columns}
-        data={data}
-        setOrders={setOrders}
-        updateMyData={updateMyData}
-        skipPageReset={skipPageReset}
-      />
+      <TableStructure columns={columns} data={data} />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { toast } from "react-toastify";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import axios from "axios";
+import axios from "../utils/axios";
 import { useLocation } from "react-router-dom";
 
 const NewOrder = () => {
@@ -10,6 +10,7 @@ const NewOrder = () => {
     fullName: "",
     phone: "",
     email: "",
+    country: "",
     businessNature: "",
     addtionalInformation: "",
   };
@@ -24,6 +25,7 @@ const NewOrder = () => {
       .max(13, "Invalid phone number!")
       .required("Phone is required"),
     businessNature: Yup.string().required("Business nature is required"),
+    country: Yup.string().required("Country is required"),
     addtionalInformation: Yup.string(),
     email: Yup.string()
       .email("Invalid email address")
@@ -41,11 +43,17 @@ const NewOrder = () => {
                 <p>Your selected package details.</p>
                 <div className="single-info">
                   <p>Package Name:</p>
+                  <h5 className="mt-2 text-center">{offer?.name}</h5>
+                </div>
+                <div className="single-info">
+                  <p>Package Type:</p>
                   <h5 className="mt-2 text-center">{offer?.title}</h5>
                 </div>
                 <div className="single-info">
                   <p>Total Price:</p>
-                  <h5 className="mt-2 text-center">$ {offer?.price}</h5>
+                  <h5 className="mt-2 text-center">
+                    $ {offer.totalPrice > 0 ? offer.totalPrice : offer.price}
+                  </h5>
                 </div>
               </div>
             </div>
@@ -61,21 +69,20 @@ const NewOrder = () => {
                       fullName,
                       email,
                       phone,
+                      country,
                       businessNature,
                       addtionalInformation,
                     } = values;
                     try {
-                      const response = await axios.post(
-                        "http://localhost:5000/orders/api",
-                        {
-                          fullName,
-                          email,
-                          phone,
-                          businessNature,
-                          addtionalInformation,
-                          offer,
-                        }
-                      );
+                      const response = await axios.post("/orders/api", {
+                        fullName,
+                        email,
+                        country,
+                        phone,
+                        businessNature,
+                        addtionalInformation,
+                        offer,
+                      });
 
                       toast.success(response.data.message, {
                         position: toast.POSITION.TOP_RIGHT,
@@ -84,14 +91,9 @@ const NewOrder = () => {
                       formikActions.setSubmitting(false);
                       formikActions.resetForm({});
                     } catch (error) {
-                      toast.error(
-                        error.response && error.response.data.message
-                          ? error.response.data.message
-                          : error.message,
-                        {
-                          position: toast.POSITION.TOP_RIGHT,
-                        }
-                      );
+                      toast.error(error.message, {
+                        position: toast.POSITION.TOP_RIGHT,
+                      });
                     }
                   }}
                 >
@@ -110,6 +112,7 @@ const NewOrder = () => {
                       fullName,
                       businessNature,
                       addtionalInformation,
+                      country,
                     } = values;
                     return (
                       <form onSubmit={handleSubmit} className="row">
@@ -160,6 +163,21 @@ const NewOrder = () => {
                           )}
                         </div>
                         <div className="col-md-6">
+                          <input
+                            type="text"
+                            name="country"
+                            onChange={handleChange("country")}
+                            onBlur={handleBlur("country")}
+                            value={country}
+                            placeholder="Country"
+                          />
+                          {touched.country && errors.country && (
+                            <div className="text-danger mb-1">
+                              {errors.country}
+                            </div>
+                          )}
+                        </div>
+                        <div className="col-md-12">
                           <input
                             type="text"
                             name="businessNature"

@@ -15,8 +15,8 @@ const Footer = () => {
                 </Link>
               </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi,
-                explicabo!
+                At Hotze graphic design agency hands over the eye-catchy and
+                impressive!
               </p>
               <Link to="aboutus">
                 Read More <i className="fa-solid fa-arrow-right"></i>

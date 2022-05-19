@@ -15,54 +15,43 @@ function Feature3() {
                 data-wow-delay="200ms"
               >
                 <div className="row">
-                  <div className="col-lg-12">
+                  <div className="col-lg-6 justify-content-center">
+                    <div className="about-thumb ">
+                      <img
+                        src="assets/images/hozte/books.png"
+                        alt="seciton-img"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
                     <div className="appie-about-content">
                       <span>Marketing</span>
                       <h3 className="title">
-                        How your children’s book will proceed.
+                        Make a lasting impression with hozte.
                       </h3>
                       <p>
-                        We have laid a simple and easy-to-follow procedure for
-                        our clients.
+                        Our approach toward complete new book cover design and
+                        layout design.
                       </p>
                     </div>
                     <div className="row">
-                      <div className="col-md-4">
+                      <div className="col-md-6">
                         <div className="appie-about-service mt-30">
                           <div className="icon">
-                            <i className="fa-light fa-1"></i>
+                            <i className="fal fa-check"></i>
                           </div>
-                          <h4 className="title">
-                            Description writing / script
-                          </h4>
-                          <p>
-                            After your affirmation, our writers go on to write
-                            the first chapter for your book. The first chapter
-                            is then sent back to you for review.
-                          </p>
+                          <h4 className="title">Carefully designed</h4>
+                          <p>Our design are according to book needs.</p>
                         </div>
                       </div>
-                      <div className="col-md-4">
+                      <div className="col-md-6">
                         <div className="appie-about-service mt-30">
                           <div className="icon">
-                            <i className="fa-light fa-2"></i>
+                            <i className="fal fa-check"></i>
                           </div>
-                          <h4 className="title">Designing</h4>
+                          <h4 className="title">Eye catching graphics</h4>
                           <p>
-                            We then format the book, add fonts and graphical
-                            details, and design the front and back covers.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="col-md-4">
-                        <div className="appie-about-service mt-30">
-                          <div className="icon">
-                            <i className="fa-light fa-3"></i>
-                          </div>
-                          <h4 className="title">Publishing on Amazon</h4>
-                          <p>
-                            We publish book in your desired format and execute a
-                            custom marketing and promotional strategy.
+                            we make books graphics that are appealing to users.
                           </p>
                         </div>
                       </div>

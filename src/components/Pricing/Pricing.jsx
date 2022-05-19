@@ -15,7 +15,7 @@ const Pricing = (props) => {
                 role="tabpanel"
                 aria-labelledby="pills-home-tab"
               >
-                <div className="row">{children}</div>
+                <div className="row pricing-section">{children}</div>
               </div>
             </div>
           </div>

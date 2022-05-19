@@ -30,9 +30,6 @@ const Hero = () => {
               <div className="thumb">
                 <img src="assets/images/hozte/1.jpg" alt="" />
               </div>
-              {/* <div className="thumb-2">
-                <img src="assets/images/hero-thumb-2.png" alt="" />
-              </div> */}
             </div>
           </div>
         </div>

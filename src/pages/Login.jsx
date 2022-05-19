@@ -1,7 +1,7 @@
 import React from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import axios from "axios";
+import axios from "../utils/axios";
 import setToken from "../utils/token";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -34,7 +34,7 @@ function Login() {
                 onSubmit={async (values, formikActions) => {
                   try {
                     const response = await axios.post(
-                      "http://localhost:5000/users/api/authenticate",
+                      "/users/api/authenticate",
                       { ...values }
                     );
 
@@ -46,14 +46,9 @@ function Login() {
                     formikActions.setSubmitting(false);
                     formikActions.resetForm({});
                   } catch (error) {
-                    toast.error(
-                      error.response && error.response.data.message
-                        ? error.response.data.message
-                        : error.message,
-                      {
-                        position: toast.POSITION.TOP_RIGHT,
-                      }
-                    );
+                    toast.error(error.message, {
+                      position: toast.POSITION.TOP_RIGHT,
+                    });
                   }
                 }}
               >
@@ -102,7 +97,7 @@ function Login() {
                           type="submit"
                           name="submit"
                           disabled={isSubmitting}
-                          value="Login"
+                          value={isSubmitting ? "Loading..." : "Login"}
                         />
                       </div>
                     </form>

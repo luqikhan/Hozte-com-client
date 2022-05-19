@@ -320,7 +320,6 @@
     }
 
     // faq accrodion
-
     if ($(".accrodion-grp").length) {
       var accrodionGrp = $(".accrodion-grp");
       accrodionGrp.each(function () {
@@ -443,7 +442,7 @@
         {
           scrollTop: 0,
         },
-        1500
+        1000
       );
     });
 

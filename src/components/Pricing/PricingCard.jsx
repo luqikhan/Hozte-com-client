@@ -17,10 +17,10 @@ const PricingCard = (props) => {
   function handleChange(event) {
     let updatedValue = {};
 
-    let extraWords = Number(event.target.value) / 100;
+    let extraWords = Number(event.target.value) / extraLimit;
     let extraVal = Number(extraWords.toString().split(".")[0]);
 
-    let totalPrice = extraVal * 10;
+    let totalPrice = extraVal * extraPrice;
     updatedValue = {
       extra: Number(event.target.value || 0),
     };
@@ -37,7 +37,7 @@ const PricingCard = (props) => {
     "pricing-one__single pricing-one__single_2 wow animated fadeInRight";
 
   return (
-    <div className="col-lg-4 col-md-6">
+    <div className="col-lg-4 col-md-6 pricing-section">
       <div
         className={
           title === "Silver"
@@ -53,7 +53,9 @@ const PricingCard = (props) => {
             <sup>$</sup> <span>{totalPrice === 0 ? price : totalPrice}</span>
           </div>
           {extraType.length > 1 && (
-            <p>Extra $10 for every 100 extra {extraType}.</p>
+            <p>
+              Extra ${extraPrice} for every {extraLimit} extra {extraType}.
+            </p>
           )}
         </div>
         <div className="pricig-body">
@@ -84,7 +86,7 @@ const PricingCard = (props) => {
           {/* <pre>{JSON.stringify(props.data, null, 2)}</pre> */}
           <div className="pricing-btn mt-35">
             <Link to="/create-order" className="main-btn" state={props.data}>
-              Choose package
+              Choose Package
             </Link>
           </div>
           {title === "Gold" && (

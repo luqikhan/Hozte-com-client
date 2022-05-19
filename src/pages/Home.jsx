@@ -5,21 +5,22 @@ import {
   PricingSection,
   ServicesSection,
   FeaturesSection,
-  FaqsSection,
-  FeaturesSection2,
+  Faqs1,
+  // FeaturesSection2,
   FeaturesSection3,
+  PreLoader,
 } from "../components";
 
 const Home = () => {
   return (
     <div>
+      <PreLoader />
       <HeroSection />
       <ServicesSection />
       <FeaturesSection3 />
-      {/* <FeaturesSection2 /> */}
       <FeaturesSection />
       <PricingSection />
-      <FaqsSection />
+      <Faqs1 />
     </div>
   );
 };

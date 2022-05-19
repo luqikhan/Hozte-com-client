@@ -80,6 +80,15 @@
     .shop-small-left-slider-active {
         left: 30px;
     }
+    .faq-area .thumb img {
+        margin-left: 0;
+        max-width: 100%;
+        object-fit: cover;
+      }
+      .pricing-section {
+        padding: 0;
+        margin: 0;
+    }
 }
 
 /* small mobile :320px. */
@@ -101,6 +110,15 @@
     .appie-hero-content ul li {
         margin-bottom: 0;
     }
+    .faq-area .thumb img {
+        margin-left: 0;
+        max-width: 100%;
+        object-fit: cover;
+    }
+    .pricing-section {
+        padding: 0;
+        margin: 0;
+    }
 }
 
 /* Large Mobile :480px. */
@@ -116,4 +134,33 @@
         top: inherit;
         left: 50px;
     }
+    .pricing-section {
+        padding: 0;
+        margin: 0;
+    }
+    
+}
+
+
+
+
+  /* Faq Area */
+  .faq-area {
+    width: 100%;
+    overflow: hidden;
+  }
+  .faq-area .faq-content {
+    padding-left: 0;
+    margin-top: 30px;
+    
+  }
+
+  .faq-area .info ul li {
+    width: 100%;
+  }
+  
+.faq-area .thumb img {
+    margin-left: 0;
+    max-width: 100%;
+    object-fit: cover;
 }

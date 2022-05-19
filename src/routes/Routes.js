@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import AuthGuard from "./ProtectedRoutes";
+
 import {
   Home,
   Contactus,
@@ -17,18 +18,11 @@ import {
   NewBlog,
   NewOrder,
 } from "../pages";
-import {
-  Checkout,
-  Success,
-  Cancel,
-  WhatsappButton,
-  PreLoader,
-} from "../components";
+import { Checkout, Success, Cancel, WhatsappButton } from "../components";
 
-function index() {
+function CustomRoutes() {
   return (
     <>
-      <PreLoader />
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
@@ -83,4 +77,4 @@ function index() {
   );
 }
 
-export default index;
+export default CustomRoutes;

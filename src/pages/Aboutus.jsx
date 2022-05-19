@@ -2,7 +2,7 @@ import React from "react";
 import { CommonHero } from "../components";
 
 function SectionCard(props) {
-  const { icon, title, text, item } = props;
+  const { Icon, title, text, item } = props;
   return (
     <>
       <div className="col-lg-4 col-md-6">
@@ -12,7 +12,7 @@ function SectionCard(props) {
           data-wow-delay="200ms"
         >
           <div className="icon">
-            <i className={icon}></i>
+            <img src={Icon} alt="about-icons" />
           </div>
           <h4 className="title">{title}</h4>
           <p>{text}</p>
@@ -43,16 +43,13 @@ const Aboutus = () => {
               <div className="appie-traffic-title">
                 <h3 className="title">HOW WE ARE</h3>
                 <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters, as opposed to using 'Content
-                  here, content here', making it look like readable English.
-                  Many desktop publishing packages and web page editors now use
-                  Lorem Ipsum as their default model text, and a search for
-                  'lorem ipsum' will uncover many web sites still in their
-                  infancy. Various versions have evolved over the years,
-                  sometimes by accident
+                  Our goal in creating Hozte is to raise your business to the
+                  top list of your competitors. We want to create your
+                  successful business. Your success is our success. You will get
+                  your expecting task 100% unique, amazing, and high-quality. If
+                  you are not satisfied with the task, then you can return your
+                  100% money. We have a portfolio of the previous task. For your
+                  amenity and comfort, you can see our client’s satisfaction.
                 </p>
               </div>
             </div>
@@ -62,16 +59,14 @@ const Aboutus = () => {
               <div className="appie-traffic-title">
                 <h3 className="title">WHAT WE DO</h3>
                 <p>
-                  It is a long established fact that a reader will be distracted
-                  by the readable content of a page when looking at its layout.
-                  The point of using Lorem Ipsum is that it has a more-or-less
-                  normal distribution of letters, as opposed to using 'Content
-                  here, content here', making it look like readable English.
-                  Many desktop publishing packages and web page editors now use
-                  Lorem Ipsum as their default model text, and a search for
-                  'lorem ipsum' will uncover many web sites still in their
-                  infancy. Various versions have evolved over the years,
-                  sometimes by accident
+                  At Hotze graphic design agency hands over the eye-catchy and
+                  impressive services that you need. Our award-winning team
+                  offers trendy services not only in graphic designing, but also
+                  in children’s book illustration, book layout design, Amazon
+                  Kindle direct publishing, video animation, YouTube video
+                  content creation, website & mobile application designing, and
+                  SEO content and copywriting. You will feel proud after getting
+                  expert services.
                 </p>
               </div>
             </div>
@@ -95,7 +90,7 @@ const Aboutus = () => {
             <div className="col-lg-6 col-md-8">
               <div className="appie-section-title">
                 <h3 className="appie-title">We’re driven by our values</h3>
-                <p>Why Hire Our Ghost Writers </p>
+                <p>Here're our core values </p>
               </div>
             </div>
           </div>
@@ -103,19 +98,19 @@ const Aboutus = () => {
             <SectionCard
               title="Experienced Book writers"
               text="Get your stories written by our experienced ghostwriters, who make sure to deliver extraordinary copies inked with their creativity."
-              icon="fa-solid fa-pen"
+              Icon="assets/images/icon/experience_book_writer.png"
               item="item-1"
             />
             <SectionCard
               title="24/7 FREE CONSULTATION"
               text="Our experts are available 24/7 to cater to your queries to ensure quick and effective communication."
-              icon="fa-regular fa-clock"
+              Icon="assets/images/icon/consultation.png"
               item="item-2"
             />
             <SectionCard
               title="100% QUALITY ASSURANCE"
               text="All the work is checked and verified by the quality assurance manager before being delivered to you. We never compromise on quality."
-              icon="fa-regular fa-file-certificate"
+              Icon="assets/images/icon/quality_assurance.png"
               item="item-3"
             />
           </div>

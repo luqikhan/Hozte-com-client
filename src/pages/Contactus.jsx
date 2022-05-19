@@ -3,7 +3,7 @@ import { CommonHero, Anchor } from "../components";
 import { toast } from "react-toastify";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import axios from "axios";
+import axios from "../utils/axios";
 
 const Contactus = () => {
   const messageInfo = {
@@ -13,7 +13,6 @@ const Contactus = () => {
     email: "",
     subject: "",
     message: "",
-    termCheck: false,
   };
 
   const messageSchema = Yup.object().shape({
@@ -28,7 +27,6 @@ const Contactus = () => {
     email: Yup.string()
       .email("Invalid email address")
       .required("Email is required"),
-    termCheck: Yup.bool().oneOf([true], "Term condition must be checked"),
   });
   return (
     <>
@@ -39,7 +37,7 @@ const Contactus = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-4">
-              <div className="contact--info-area">
+              <div className="contact--info-area mb-4">
                 <h3>Get in touch</h3>
                 <p>
                   Looking for help? Fill the form and start a new adventure.
@@ -73,22 +71,25 @@ const Contactus = () => {
                 <div className="ab-social">
                   <h5>Follow Us</h5>
                   <Anchor
-                    className="fac"
+                    className="fac mr-1"
                     href="https://www.facebook.com/Hozte-116700961018080/"
                   >
                     <i className="fab fa-facebook-f"></i>
                   </Anchor>
-                  <Anchor className="twi" href="https://twitter.com/hozte77">
+                  <Anchor
+                    className="twi mr-1"
+                    href="https://twitter.com/hozte77"
+                  >
                     <i className="fab fa-twitter"></i>
                   </Anchor>
                   <Anchor
-                    className="you"
+                    className="you mr-1"
                     href="https://www.pinterest.com/hozte77"
                   >
                     <i className="fab fa-pinterest"></i>
                   </Anchor>
                   <Anchor
-                    className="lin"
+                    className="lin mr-1"
                     href="https://www.linkedin.com/in/ho-zte-68bab7238/"
                   >
                     <i className="fab fa-linkedin-in"></i>
@@ -113,10 +114,14 @@ const Contactus = () => {
                       message,
                     } = values;
                     try {
-                      const response = await axios.post(
-                        "http://localhost:5000/questions/api",
-                        { email, firstName, lastName, phone, subject, message }
-                      );
+                      const response = await axios.post("/questions/api", {
+                        email,
+                        firstName,
+                        lastName,
+                        phone,
+                        subject,
+                        message,
+                      });
 
                       toast.success(response.data.message, {
                         position: toast.POSITION.TOP_RIGHT,
@@ -125,14 +130,9 @@ const Contactus = () => {
                       formikActions.setSubmitting(false);
                       formikActions.resetForm({});
                     } catch (error) {
-                      toast.error(
-                        error.response && error.response.data.message
-                          ? error.response.data.message
-                          : error.message,
-                        {
-                          position: toast.POSITION.TOP_RIGHT,
-                        }
-                      );
+                      toast.error(error.message, {
+                        position: toast.POSITION.TOP_RIGHT,
+                      });
                     }
                   }}
                 >
@@ -152,7 +152,6 @@ const Contactus = () => {
                       phone,
                       message,
                       subject,
-                      termCheck,
                     } = values;
                     return (
                       <form onSubmit={handleSubmit} className="row">
@@ -245,28 +244,8 @@ const Contactus = () => {
                             </div>
                           )}
                         </div>
+
                         <div className="col-md-6">
-                          <div className="condition-check">
-                            <input
-                              id="terms-conditions"
-                              type="checkbox"
-                              name="termCheck"
-                              onChange={handleChange("termCheck")}
-                              onBlur={handleBlur("termCheck")}
-                              value={termCheck}
-                            />
-                            <label for="terms-conditions">
-                              I agree to the
-                              <Anchor href="#">Terms & Conditions</Anchor>
-                            </label>
-                          </div>
-                          {touched.termCheck && errors.termCheck && (
-                            <div className="text-danger mb-1">
-                              {errors.termCheck}
-                            </div>
-                          )}
-                        </div>
-                        <div className="col-md-6 text-right">
                           <input
                             type="submit"
                             name="submit"
@@ -287,7 +266,10 @@ const Contactus = () => {
 
       {/* <!-- Gamps Start --> */}
       <div className="bisylms-map">
-        <iframe src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;coord=39.966528,-75.158284&amp;q=1%20Grafton%20Street%2C%20Dublin%2C%20Ireland+(My%20Business%20Name)&amp;ie=UTF8&amp;t=p&amp;z=16&amp;iwloc=B&amp;output=embed"></iframe>
+        <iframe
+          title="office-location"
+          src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;coord=39.966528,-75.158284&amp;q=1%20Grafton%20Street%2C%20Dublin%2C%20Ireland+(My%20Business%20Name)&amp;ie=UTF8&amp;t=p&amp;z=16&amp;iwloc=B&amp;output=embed"
+        ></iframe>
       </div>
       {/* <!-- Gamps Start --> */}
     </>
