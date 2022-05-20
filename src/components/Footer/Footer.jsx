@@ -130,7 +130,22 @@ const Footer = () => {
           <div className="col-lg-12">
             <div className="footer-copyright d-flex align-items-center justify-content-between pt-35">
               <div className="copyright-text">
-                <p>Copyright © 2022 Hozte. All rights reserved.</p>
+                <p>Copyright © 2021 Hozte. All rights reserved.</p>
+              </div>
+              <div className="apps-download-btn">
+                <ul>
+                  <li>
+                    <p>Powered By</p>
+                  </li>
+                  <li>
+                    <Anchor
+                      className="item-2"
+                      href="https://www.pluslogix.com/"
+                    >
+                      PlusLogix
+                    </Anchor>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

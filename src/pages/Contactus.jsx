@@ -46,8 +46,7 @@ const Contactus = () => {
                   <h5>Address</h5>
                   <p>
                     <i className="fal fa-home"></i>
-                    I/9 street A-39,
-                    <br /> Islamabad
+                    Duranpur shorkot Pakistan
                   </p>
                 </div>
                 <div className="single-info">

@@ -6933,6 +6933,7 @@ blockquote cite {
 @media (max-width: 767px) {
     .footer-copyright .apps-download-btn {
         margin-bottom: 20px;
+        margin-top: 20px;
     }
 }
 
@@ -6960,7 +6961,7 @@ blockquote cite {
 
 .footer-copyright .apps-download-btn ul li a {
     background: #fff;
-    color: #0e1133;
+    color: #f9c349;
     line-height: 40px;
     padding: 0 23px;
     border-radius: 6px;
@@ -6979,7 +6980,7 @@ blockquote cite {
 
 .footer-copyright .apps-download-btn ul li a.item-2 {
     background: transparent;
-    color: #0e1133;
+    color: #2b70fa;
     border-color: #e7eaef;
 }
 
