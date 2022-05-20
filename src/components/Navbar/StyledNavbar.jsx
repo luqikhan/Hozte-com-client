@@ -28,7 +28,11 @@ const Navbar = () => {
                   </Anchor>
                 </div>
                 <div className="offcanvas-brand text-center mb-40">
-                  <img src="assets/images/logo.png" alt="logo-png" style={{ height: 64,}}/>
+                  {/* <img
+                    src="assets/images/logo.png"
+                    alt="logo-png"
+                    style={{ height: 64 }}
+                  /> */}
                 </div>
                 <div id="menu" className="text-left ">
                   <ul className="offcanvas_main_menu">
@@ -165,8 +169,8 @@ const Navbar = () => {
                     </li>
                     <li>
                       <Anchor href="#">
-                        <i className="fal fa-map-marker-alt"></i> I/9 street 34,
-                        Islamabad
+                        <i className="fal fa-map-marker-alt"></i> Duranpur
+                        shorkot Pakistan
                       </Anchor>
                     </li>
                   </ul>

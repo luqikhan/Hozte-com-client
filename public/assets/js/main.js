@@ -2,7 +2,7 @@
   "use strict";
   // test preloader
   window.onload = function () {
-    document.getElementById("preloader-wrap").style.display = "none";
+    // document.getElementById("preloader-wrap").style.display = "none";
     // document.getElementById("preloading1").style.display = "block";
   };
   $(window).load(function () {

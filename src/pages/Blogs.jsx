@@ -8,28 +8,27 @@ function Blog() {
   const [recentBlogs, setRecentBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchBlogs = async () => {
-    try {
-      const response = await axios.get(`/blogs/api`);
-      const { blogs } = response.data;
-      setLoading(false);
-
-      if (blogs.length) {
-        setBlogs(blogs);
-      }
-    } catch (error) {
-      console.log(error.message);
-      setLoading(false);
-    }
-  };
-
   useEffect(() => {
-    console.log("mounted!");
+    let mounted = true;
+    const fetchBlogs = async () => {
+      try {
+        const response = await axios.get(`/blogs/api`);
+        const { blogs } = response.data;
+        setLoading(false);
+
+        if (mounted) {
+          setBlogs(blogs);
+        }
+      } catch (error) {
+        console.log(error.message);
+        setLoading(false);
+      }
+    };
     const fetchRecentBlogs = async () => {
       try {
         const response = await axios.get(`/blogs/api/recent`);
         const { blogs } = response.data;
-        if (blogs.length) {
+        if (mounted) {
           setRecentBlogs(blogs);
         }
       } catch (error) {
@@ -39,7 +38,7 @@ function Blog() {
     fetchRecentBlogs();
 
     fetchBlogs();
-    return () => console.log("unmounted!");
+    return () => (mounted = false);
   }, []);
 
   const removePost = async (id) => {
@@ -81,7 +80,7 @@ function Blog() {
 
       <section className="blogpage-section">
         <div className="container">
-          <div className="row d-flex justify-content-center align-items-center">
+          <div className="row">
             <div className="col-lg-8 col-md-7">
               <div className="row">
                 {loading ? (
@@ -104,7 +103,7 @@ function Blog() {
                   ))
                 ) : (
                   <div className="text-center">
-                    <p>No blog post is avialable! </p>
+                    <p className="mb-5">No blog post is avialable! </p>
                   </div>
                 )}
               </div>

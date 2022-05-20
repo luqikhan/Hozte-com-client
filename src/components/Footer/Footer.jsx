@@ -118,7 +118,8 @@ const Footer = () => {
                 </li>
                 <li>
                   <Anchor href="#">
-                    <i className="fa-solid fa-map-marker-alt"></i> I/9 Islamabad
+                    <i className="fa-solid fa-map-marker-alt"></i>Duranpur
+                    shorkot Pakistan
                   </Anchor>
                 </li>
               </ul>

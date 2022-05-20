@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import {
   HeroSection,
@@ -12,9 +12,15 @@ import {
 } from "../components";
 
 const Home = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 1500);
+  }, []);
+
   return (
     <div>
-      <PreLoader />
+      {loading && <PreLoader />}
       <HeroSection />
       <ServicesSection />
       <FeaturesSection3 />

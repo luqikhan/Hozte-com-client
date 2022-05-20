@@ -8,7 +8,6 @@ import { ScrollToTop } from "./components";
 
 function App() {
   toast.configure();
-  
 
   return (
     <div className="App">

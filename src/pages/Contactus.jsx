@@ -268,7 +268,7 @@ const Contactus = () => {
       <div className="bisylms-map">
         <iframe
           title="office-location"
-          src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;coord=39.966528,-75.158284&amp;q=1%20Grafton%20Street%2C%20Dublin%2C%20Ireland+(My%20Business%20Name)&amp;ie=UTF8&amp;t=p&amp;z=16&amp;iwloc=B&amp;output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3427.9110986955047!2d72.09968501438182!3d30.777074490546767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x392366530f29d645%3A0x1649473ad42a3587!2sDuranpur!5e0!3m2!1sen!2s!4v1653021704386!5m2!1sen!2s"
         ></iframe>
       </div>
       {/* <!-- Gamps Start --> */}
