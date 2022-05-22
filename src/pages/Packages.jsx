@@ -25,6 +25,12 @@ import {
   videoGoldData,
   videoPlatinumData,
   videoSilverData,
+  appGoldData,
+  appPlatinumData,
+  appSilverData,
+  webisteGoldData,
+  websitePlatinumData,
+  websiteSilverData,
 } from "../constants";
 
 function Packages() {
@@ -79,6 +85,14 @@ function Packages() {
   const [amazonPubishingCampaign, setAmazonPubishingCampaign] = useState(
     amazonPubishingCampaignData
   );
+
+  const [websiteSilver, setWebisteSilver] = useState(websiteSilverData);
+  const [websiteGold, setWebsiteGold] = useState(webisteGoldData);
+  const [websitePlatinum, setWebsitePlatinum] = useState(websitePlatinumData);
+
+  const [appSilver, setAppSilver] = useState(appSilverData);
+  const [appGold, setAppGold] = useState(appGoldData);
+  const [appPlatinum, setAppPlatinum] = useState(appPlatinumData);
 
   // handle changes start
   function handleChangeStorySilver(updatedValue, totalPrice) {
@@ -239,6 +253,50 @@ function Packages() {
 
   function handleChangeYoutubePlatinum(updatedValue, totalPrice) {
     setYoutubePlatinum((previousState) => ({
+      ...previousState,
+      totalPrice: previousState.price + totalPrice,
+      ...updatedValue,
+    }));
+  }
+
+  function handleChangeWebsitePlatinum(updatedValue, totalPrice) {
+    setWebsitePlatinum((previousState) => ({
+      ...previousState,
+      totalPrice: previousState.price + totalPrice,
+      ...updatedValue,
+    }));
+  }
+  function handleChangeWebsiteGold(updatedValue, totalPrice) {
+    setWebsiteGold((previousState) => ({
+      ...previousState,
+      totalPrice: previousState.price + totalPrice,
+      ...updatedValue,
+    }));
+  }
+  function handleChangeWebsiteSilver(updatedValue, totalPrice) {
+    setWebisteSilver((previousState) => ({
+      ...previousState,
+      totalPrice: previousState.price + totalPrice,
+      ...updatedValue,
+    }));
+  }
+
+  function handleChangeAppPlatinum(updatedValue, totalPrice) {
+    setAppPlatinum((previousState) => ({
+      ...previousState,
+      totalPrice: previousState.price + totalPrice,
+      ...updatedValue,
+    }));
+  }
+  function handleChangeAppGold(updatedValue, totalPrice) {
+    setAppGold((previousState) => ({
+      ...previousState,
+      totalPrice: previousState.price + totalPrice,
+      ...updatedValue,
+    }));
+  }
+  function handleChangeAppSilver(updatedValue, totalPrice) {
+    setAppSilver((previousState) => ({
       ...previousState,
       totalPrice: previousState.price + totalPrice,
       ...updatedValue,
@@ -423,6 +481,54 @@ function Packages() {
               <PricingCard
                 data={youtubePlatinum}
                 onChange={handleChangeYoutubePlatinum}
+              />
+            </PricingSection>
+          </>
+        );
+      case "website":
+        return (
+          <>
+            <div className="row">
+              <div className="col-sm-6">
+                <div className="how-it-work-box">
+                  <span>7</span>
+                  <h5 className="title">Website Designing</h5>
+                </div>
+              </div>
+            </div>
+            <PricingSection>
+              <PricingCard
+                data={websiteSilver}
+                onChange={handleChangeWebsiteSilver}
+              />
+              <PricingCard
+                data={websiteGold}
+                onChange={handleChangeWebsiteGold}
+              />
+              <PricingCard
+                data={websitePlatinum}
+                onChange={handleChangeWebsitePlatinum}
+              />
+            </PricingSection>
+          </>
+        );
+      case "app":
+        return (
+          <>
+            <div className="row">
+              <div className="col-sm-6">
+                <div className="how-it-work-box">
+                  <span>8</span>
+                  <h5 className="title">Mobile Application Design</h5>
+                </div>
+              </div>
+            </div>
+            <PricingSection>
+              <PricingCard data={appSilver} onChange={handleChangeAppSilver} />
+              <PricingCard data={appGold} onChange={handleChangeAppGold} />
+              <PricingCard
+                data={appPlatinum}
+                onChange={handleChangeAppPlatinum}
               />
             </PricingSection>
           </>

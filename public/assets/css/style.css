@@ -377,6 +377,7 @@ p {
     .appie-section-title p {
         font-size: 15px;
     }
+
 }
 
 .appie-section-title .main-btn {
@@ -387,9 +388,9 @@ p {
 }
 
 .appie-section-title .main-btn:hover {
-    background: #ff3e66;
+    background: #2b70fa;
     color: #fff;
-    border-color: #ff3e66;
+    border-color: #2b70fa;
 }
 
 .appie-section-title.appie-section-title-2 .appie-title {

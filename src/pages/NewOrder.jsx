@@ -74,15 +74,21 @@ const NewOrder = () => {
                       addtionalInformation,
                     } = values;
                     try {
-                      const response = await axios.post("/orders/api", {
-                        fullName,
-                        email,
-                        country,
-                        phone,
-                        businessNature,
-                        addtionalInformation,
-                        offer,
-                      });
+                      const response = await axios.post(
+                        "/orders/api",
+                        {
+                          fullName,
+                          email,
+                          country,
+                          phone,
+                          businessNature,
+                          addtionalInformation,
+                          offer,
+                        },
+                        {
+                          timeout: 20000,
+                        }
+                      );
 
                       toast.success(response.data.message, {
                         position: toast.POSITION.TOP_RIGHT,
@@ -212,7 +218,7 @@ const NewOrder = () => {
                           <input
                             type="submit"
                             name="submit"
-                            value="Send Order"
+                            value={isSubmitting ? "Loading...." : "Send Order"}
                             disabled={isSubmitting}
                           />
                         </div>

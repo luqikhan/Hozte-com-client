@@ -36,10 +36,10 @@ const Navbar = () => {
                 </div>
                 <div id="menu" className="text-left ">
                   <ul className="offcanvas_main_menu">
-                    <li className="menu-item-has-children active">
+                    <li className="menu-item-has-children active item-close">
                       <NavLink to="/">Home</NavLink>
                     </li>
-                    <li className="menu-item-has-children">
+                    <li className="menu-item-has-children item-close">
                       <NavLink to="/aboutus">About Us</NavLink>
                     </li>
                     <li className="menu-item-has-children">
@@ -80,57 +80,91 @@ const Navbar = () => {
                     </li>
 
                     {/* packages start */}
-                    <li className="menu-item-has-children">
-                      <NavLink to="/packages/storywriting">Packages</NavLink>
-                      <ul className="sub-menu">
-                        <li>
-                          <NavLink to="/packages/storywriting">
-                            Story writing for kids
-                          </NavLink>
-                        </li>
-                        <li>
-                          <NavLink to="/packages/bookdesigning">
-                            Children’s book designing
-                          </NavLink>
-                        </li>
-                        <li>
-                          <NavLink to="/packages/bookdesigning">
-                            Book Layout Design
-                          </NavLink>
-                        </li>
-                        <li>
-                          <NavLink to="/packages/publishingonamazon">
-                            Perfectly Publishing on Amazon KDP
-                          </NavLink>
-                        </li>
-                        <li>
-                          <NavLink to="/packages/youtubevideocreation">
-                            YouTube Video Content Creation
-                          </NavLink>
-                        </li>
-                        <li>
-                          <NavLink to="/packages/videoanimation">
-                            Video Animation
-                          </NavLink>
-                        </li>
-                      </ul>
-                    </li>
+                    {!isAuthenticated ? (
+                      <li className="menu-item-has-children">
+                        <NavLink to="/packages/storywriting">Packages</NavLink>
+                        <ul className="sub-menu">
+                          <li>
+                            <NavLink to="/packages/storywriting">
+                              Story writing for kids
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink to="/packages/bookdesigning">
+                              Children’s book designing
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink to="/packages/bookdesigning">
+                              Book Layout Design
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink to="/packages/publishingonamazon">
+                              Perfectly Publishing on Amazon KDP
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink to="/packages/youtubevideocreation">
+                              YouTube Video Content Creation
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink to="/packages/videoanimation">
+                              Video Animation
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink to="/packages/website">
+                              Website Designing
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink to="/packages/app">App Designing</NavLink>
+                          </li>
+                        </ul>
+                      </li>
+                    ) : null}
                     {/* packages end */}
 
-                    <li className="menu-item-has-children">
+                    <li className="menu-item-has-children item-close">
                       <NavLink to="/blogs">Blog</NavLink>
                     </li>
 
-                    <li className="menu-item-has-children">
+                    <li className="menu-item-has-children item-close">
                       <NavLink to="contactus">Contact Us</NavLink>
                     </li>
                     {isAuthenticated ? (
                       <li className="menu-item-has-children">
                         <NavLink to="/dashboard">Dashboard</NavLink>
+                        <ul className="sub-menu">
+                          <li>
+                            <NavLink to="/orders">Orders</NavLink>
+                          </li>
+                          <li>
+                            <NavLink to="/create-blog">Create Post</NavLink>
+                          </li>
+                          <li>
+                            <NavLink to="/change-password">
+                              Change Password
+                            </NavLink>
+                          </li>
+                        </ul>
                       </li>
                     ) : null}
                   </ul>
                 </div>
+                {isAuthenticated && (
+                  <div>
+                    <button
+                      type="button"
+                      onClick={() => logout()}
+                      className="btn btn-outline-primary btn-sm mt-2 item-close"
+                    >
+                      Logout
+                    </button>
+                  </div>
+                )}
                 <div className="offcanvas-social">
                   <ul className="">
                     <li>
@@ -316,6 +350,14 @@ const Navbar = () => {
                               YouTube Video Content Creation
                             </NavLink>
                           </li>
+                          <li>
+                            <NavLink to="/packages/website">
+                              Website Designing
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink to="/packages/app">App Designing</NavLink>
+                          </li>
                         </ul>
                       </li>
                     )}
@@ -352,6 +394,11 @@ const Navbar = () => {
                           </li>
                           <li>
                             <NavLink to="/create-blog">New Blog</NavLink>
+                          </li>
+                          <li>
+                            <NavLink to="/change-password">
+                              Change Password
+                            </NavLink>
                           </li>
                         </ul>
                       </li>

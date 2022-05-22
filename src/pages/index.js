@@ -12,6 +12,7 @@ import TotalOrders from "./TotalOrders";
 import NewOrder from "./NewOrder";
 import NewBlog from "./NewBlog";
 import SharedLayout from "./SharedLayout";
+import ChangePassword from "./ChangePassword";
 
 export {
   Home,
@@ -28,4 +29,5 @@ export {
   TotalOrders,
   Blogs,
   SharedLayout,
+  ChangePassword
 };

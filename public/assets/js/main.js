@@ -477,9 +477,12 @@
       $(".offcanvas_menu_wrapper,.off_canvars_overlay").addClass("active");
     });
 
-    $(".canvas_close,.off_canvars_overlay").on("click", function () {
-      $(".offcanvas_menu_wrapper,.off_canvars_overlay").removeClass("active");
-    });
+    $(".canvas_close,.off_canvars_overlay,.item-close,.sub-menu").on(
+      "click",
+      function () {
+        $(".offcanvas_menu_wrapper,.off_canvars_overlay").removeClass("active");
+      }
+    );
 
     /*---Off Canvas Menu---*/
     var $offcanvasNav = $(".offcanvas_main_menu"),

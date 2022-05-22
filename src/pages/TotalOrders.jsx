@@ -220,13 +220,14 @@ function Order() {
   return (
     <Fragment>
       <CommonHero title="Dashboard" pageTitle="DASHBOARD" />
-      {loading ? (
-        <div className="d-flex justify-content-center align-items-center">
-          <Spinner />
-        </div>
-      ) : (
-        <div className="container mt-90 mb-90">
-          <h4 className="mb-5">Orders List</h4>
+
+      <div className="container mt-90 mb-90">
+        <h4 className="mb-5">Orders List</h4>
+        {loading ? (
+          <div className="d-flex justify-content-center align-items-center">
+            <Spinner />
+          </div>
+        ) : (
           <Table
             columns={ordersColumns}
             data={ordersData}
@@ -234,8 +235,8 @@ function Order() {
             updateMyData={updateMyData}
             skipPageReset={skipPageReset}
           />
-        </div>
-      )}
+        )}
+      </div>
     </Fragment>
   );
 }

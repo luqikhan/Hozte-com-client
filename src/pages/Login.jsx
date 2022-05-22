@@ -3,7 +3,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import axios from "../utils/axios";
 import setToken from "../utils/token";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Navigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 function Login() {

@@ -1,16 +1,24 @@
 import React from "react";
 import { FaBook } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Services = () => {
   return (
     // <!--====== APPIE SERVICES PART START ======-->
 
     <section className="appie-service-area pt-90 pb-100" id="service">
       <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-lg-6">
-            <div className="appie-section-title text-center">
+        <div className="row align-items-end">
+          <div className="col-lg-6 col-md-8">
+            <div className="appie-section-title">
               <h3 className="appie-title">What can we do</h3>
               <p>The full main areas of our services and skills set..</p>
+            </div>
+          </div>
+          <div className="col-lg-6 col-md-4">
+            <div className="appie-section-title text-right">
+              <Link className="main-btn" to="ourservices">
+                View all Services <i className="fal fa-arrow-right"></i>
+              </Link>
             </div>
           </div>
         </div>

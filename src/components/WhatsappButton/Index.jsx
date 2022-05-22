@@ -6,7 +6,7 @@ function Index() {
   return (
     <>
       <Anchor
-        href={`https://wa.me/${process.env.REACT_APP_WHATSAPP_NUMBER}`}
+        href="https://wa.me/3443110881"
         className="whatsapp_float"
         target="_blank"
         rel="noopener noreferrer"

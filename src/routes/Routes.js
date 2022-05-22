@@ -17,6 +17,7 @@ import {
   SharedLayout,
   NewBlog,
   NewOrder,
+  ChangePassword,
 } from "../pages";
 import { Checkout, Success, Cancel, WhatsappButton } from "../components";
 
@@ -26,18 +27,18 @@ function CustomRoutes() {
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
-          <Route path="aboutus" element={<Aboutus />} />
-          <Route path="contactus" element={<Contactus />} />
-          <Route path="ourservices" element={<Services />} />
-          <Route path="getaquote" element={<GetAQuote />} />
-          <Route path="checkout" element={<Checkout />} />
-          <Route path="success" element={<Success />} />
-          <Route path="cancel" element={<Cancel />} />
-          <Route path="packages/:id" element={<Packages />} />
-          <Route path="blogs" element={<Blogs />} />
-          <Route path="blogs/:id" element={<SingleBlog />} />
+          <Route path="/aboutus" element={<Aboutus />} />
+          <Route path="/contactus" element={<Contactus />} />
+          <Route path="/ourservices" element={<Services />} />
+          <Route path="/getaquote" element={<GetAQuote />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/success" element={<Success />} />
+          <Route path="/cancel" element={<Cancel />} />
+          <Route path="/packages/:id" element={<Packages />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:id" element={<SingleBlog />} />
           <Route
-            path="orders"
+            path="/orders"
             element={
               <AuthGuard>
                 <TotalOrders />
@@ -45,7 +46,7 @@ function CustomRoutes() {
             }
           />
           <Route
-            path="dashboard"
+            path="/dashboard"
             element={
               <AuthGuard>
                 <Dashboard />
@@ -53,16 +54,24 @@ function CustomRoutes() {
             }
           />
           <Route
-            path="create-blog"
+            path="/create-blog"
             element={
               <AuthGuard>
                 <NewBlog />
               </AuthGuard>
             }
           />
+          <Route
+            path="/change-password"
+            element={
+              <AuthGuard>
+                <ChangePassword />
+              </AuthGuard>
+            }
+          />
           <Route path="create-order" element={<NewOrder />} />
         </Route>
-        <Route path="login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route
           path="*"
           element={

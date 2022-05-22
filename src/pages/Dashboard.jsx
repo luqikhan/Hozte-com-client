@@ -155,28 +155,28 @@ const Dashboard = () => {
   return (
     <div>
       <CommonHero title="Dashboard" pageTitle="DASHBOARD" />
-      {loading ? (
-        <div className="d-flex justify-content-center align-items-center">
-          <Spinner />
-        </div>
-      ) : (
-        <div className="container pb-100">
-          {/* <!--====== APPIE SERVICES PART START ======--> */}
 
-          <section
-            className="appie-service-area appie-service-3-area pt-100 pb-100"
-            id="service"
-          >
-            <div className="container">
-              <div className="row align-items-end">
-                <div className="col-lg-6">
-                  <div className="appie-section-title">
-                    <h3 className="appie-title">Our Dashboard Analytics</h3>
-                    <p>See all your website latest orders and messages.</p>
-                  </div>
+      <div className="container pb-100">
+        {/* <!--====== APPIE SERVICES PART START ======--> */}
+
+        <section
+          className="appie-service-area appie-service-3-area pt-100 pb-100"
+          id="service"
+        >
+          <div className="container">
+            <div className="row align-items-end">
+              <div className="col-lg-6">
+                <div className="appie-section-title">
+                  <h3 className="appie-title">Our Dashboard Analytics</h3>
+                  <p>See all your website latest orders and messages.</p>
                 </div>
               </div>
-
+            </div>
+            {loading ? (
+              <div className="d-flex justify-content-center align-items-center">
+                <Spinner />
+              </div>
+            ) : (
               <div className="row">
                 <div className="col-lg-3 col-md-6">
                   <div
@@ -233,20 +233,32 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
+            )}
+          </div>
+        </section>
 
-          {/* <!--====== APPIE SERVICES PART ENDS ======--> */}
-          <div>
-            <h4 className="mb-5">Quotes List</h4>
+        {/* <!--====== APPIE SERVICES PART ENDS ======--> */}
+        <div>
+          <h4 className="mb-5">Quotes List</h4>
+          {loading ? (
+            <div className="d-flex justify-content-center align-items-center">
+              <Spinner />
+            </div>
+          ) : (
             <CommonTable columns={quoteColumns} data={quotesData} />
-          </div>
-          <div className="mt-90">
-            <h4 className="mb-5">Messages List</h4>
-            <CommonTable columns={messagesColumns} data={questionsData} />
-          </div>
+          )}
         </div>
-      )}
+        <div className="mt-90">
+          <h4 className="mb-5">Messages List</h4>
+          {loading ? (
+            <div className="d-flex justify-content-center align-items-center">
+              <Spinner />
+            </div>
+          ) : (
+            <CommonTable columns={messagesColumns} data={questionsData} />
+          )}
+        </div>
+      </div>
     </div>
   );
 };

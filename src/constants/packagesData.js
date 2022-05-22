@@ -516,6 +516,131 @@ const youtubePlatinumData = {
   extraType: "",
 };
 
+// Website designing
+const websiteSilverData = {
+  name: "Website Designing",
+  extraPrice: 20,
+  extraLimit: 1,
+  title: "Silver",
+  services: [
+    "3 Days Delivery",
+    "3 Revision",
+    "1 Pages/Screens",
+    "Pixel perfect UI Design",
+    "Prototype",
+    "Source File",
+  ],
+  price: 49,
+  totalPrice: 0,
+  extra: 0,
+  options: true,
+  extraType: "pages",
+};
+
+const webisteGoldData = {
+  name: "Website Designing",
+  extraPrice: 20,
+  extraLimit: 1,
+  title: "Gold",
+  services: [
+    "5 Days Delivery",
+    "5 Revision",
+    "3 Pages/Screens",
+    "1 custom asset",
+    "Pixel perfect UI Design",
+    "Prototype",
+    "Source File",
+  ],
+  price: 99,
+  totalPrice: 0,
+  extra: 0,
+  options: true,
+  extraType: "pages",
+};
+
+const websitePlatinumData = {
+  name: "Website Designing",
+  extraPrice: 20,
+  extraLimit: 1,
+  title: "Platinum",
+  services: [
+    "12 Days Delivery",
+    "8 Revision",
+    "8 Pages/Screens",
+    "Responsive Design",
+    "Content Upload",
+    "Pixel perfect UI Design",
+    "Prototype",
+    "Source File",
+  ],
+  price: 149,
+  totalPrice: 0,
+  extra: 0,
+  options: true,
+  extraType: "pages",
+};
+
+// Mobile Application Design
+const appSilverData = {
+  name: "Mobile Application Design",
+  extraPrice: 20,
+  extraLimit: 1,
+  title: "Silver",
+  services: [
+    "3 Days Delivery",
+    "3 Revision",
+    "5 Pages/Screens",
+    "Responsive Design",
+    "Wireframes",
+    "Source File",
+  ],
+  price: 149,
+  totalPrice: 0,
+  extra: 0,
+  options: true,
+  extraType: "pages",
+};
+
+const appGoldData = {
+  name: "Mobile Application Design",
+  extraPrice: 20,
+  extraLimit: 1,
+  title: "Gold",
+  services: [
+    "5 Days Delivery",
+    "5 Revision",
+    "15 Pages/Screens",
+    "Responsive Design",
+    "Wireframes",
+    "Source File",
+  ],
+  price: 349,
+  totalPrice: 0,
+  extra: 0,
+  options: true,
+  extraType: "pages",
+};
+
+const appPlatinumData = {
+  name: "Mobile Application Design",
+  extraPrice: 20,
+  extraLimit: 1,
+  title: "Platinum",
+  services: [
+    "12 Days Delivery",
+    "8 Revision",
+    "25 Pages/Screens",
+    "Responsive Design",
+    "Wireframes",
+    "Source File",
+  ],
+  price: 499,
+  totalPrice: 0,
+  extra: 0,
+  options: true,
+  extraType: "pages",
+};
+
 export {
   storyWritingGoldData,
   storyWritingSilverData,
@@ -538,4 +663,10 @@ export {
   videoGoldData,
   videoPlatinumData,
   videoSilverData,
+  webisteGoldData,
+  websitePlatinumData,
+  websiteSilverData,
+  appGoldData,
+  appPlatinumData,
+  appSilverData,
 };

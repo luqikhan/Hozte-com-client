@@ -20,6 +20,12 @@ import {
   videoGoldData,
   videoPlatinumData,
   videoSilverData,
+  appGoldData,
+  appPlatinumData,
+  appSilverData,
+  webisteGoldData,
+  websitePlatinumData,
+  websiteSilverData,
 } from "./packagesData";
 
 export {
@@ -44,4 +50,10 @@ export {
   videoGoldData,
   videoPlatinumData,
   videoSilverData,
+  appGoldData,
+  appPlatinumData,
+  appSilverData,
+  webisteGoldData,
+  websitePlatinumData,
+  websiteSilverData,
 };
