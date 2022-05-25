@@ -11,11 +11,11 @@ const Footer = () => {
             <div className="footer-about-widget">
               <div className="logo">
                 <Link to="/">
-                  <img src="assets/images/logo.png" alt="" />
+                  <img src="assets/images/logo-dark.png" alt="" />
                 </Link>
               </div>
               <p>
-                At Hotze graphic design agency hands over the eye-catchy and
+                At Hozte graphic design agency hands over the eye-catchy and
                 impressive!
               </p>
               <Link to="aboutus">
@@ -55,16 +55,19 @@ const Footer = () => {
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="aboutus">About Us</Link>
+                  <Link to="/aboutus">About Us</Link>
                 </li>
                 <li>
-                  <Link to="ourservices">Service</Link>
+                  <Link to="/ourservices">Service</Link>
                 </li>
                 <li>
-                  <Link to="blogs">Blog</Link>
+                  <Link to="/blogs">Blog</Link>
                 </li>
                 <li>
-                  <Link to="contactus">Contact</Link>
+                  <Link to="/contactus">Contact</Link>
+                </li>
+                <li>
+                  <Link to="/faqs">Faqs</Link>
                 </li>
               </ul>
             </div>
@@ -74,30 +77,38 @@ const Footer = () => {
               <h4 className="title">Packages</h4>
               <ul>
                 <li>
-                  <Link to="packages/storywriting">Story writing for kids</Link>
+                  <Link to="/packages/storywriting">
+                    Story writing for kids
+                  </Link>
                 </li>
                 <li>
-                  <Link to="packages/bookdesigning">
+                  <Link to="/packages/bookdesigning">
                     Children’s book designing
                   </Link>
                 </li>
                 <li>
-                  <Link to="packages/booklayoutdesigning">
+                  <Link to="/packages/booklayoutdesigning">
                     Book Layout Design
                   </Link>
                 </li>
                 <li>
-                  <Link to="packages/publishingonamazon">
+                  <Link to="/packages/publishingonamazon">
                     Perfectly Publishing on Amazon KDP
                   </Link>
                 </li>
                 <li>
-                  <Link to="packages/videoanimation">Video Animation</Link>
+                  <Link to="/packages/videoanimation">Video Animation</Link>
                 </li>
                 <li>
-                  <Link to="packages/youtubevideocreation">
+                  <Link to="/packages/youtubevideocreation">
                     YouTube Video Content Creation
                   </Link>
+                </li>
+                <li>
+                  <Link to="/packages/website">Website Designing</Link>
+                </li>
+                <li>
+                  <Link to="/packages/app">Mobile App Designing</Link>
                 </li>
               </ul>
             </div>

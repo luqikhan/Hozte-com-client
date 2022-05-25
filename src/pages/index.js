@@ -13,7 +13,7 @@ import NewOrder from "./NewOrder";
 import NewBlog from "./NewBlog";
 import SharedLayout from "./SharedLayout";
 import ChangePassword from "./ChangePassword";
-
+import FAQs from "./FAQs";
 export {
   Home,
   Aboutus,
@@ -29,5 +29,6 @@ export {
   TotalOrders,
   Blogs,
   SharedLayout,
-  ChangePassword
+  ChangePassword,
+  FAQs
 };

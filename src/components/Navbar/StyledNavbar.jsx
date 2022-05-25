@@ -80,51 +80,51 @@ const Navbar = () => {
                     </li>
 
                     {/* packages start */}
-                    {!isAuthenticated ? (
-                      <li className="menu-item-has-children">
-                        <NavLink to="/packages/storywriting">Packages</NavLink>
-                        <ul className="sub-menu">
-                          <li>
-                            <NavLink to="/packages/storywriting">
-                              Story writing for kids
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/packages/bookdesigning">
-                              Children’s book designing
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/packages/bookdesigning">
-                              Book Layout Design
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/packages/publishingonamazon">
-                              Perfectly Publishing on Amazon KDP
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/packages/youtubevideocreation">
-                              YouTube Video Content Creation
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/packages/videoanimation">
-                              Video Animation
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/packages/website">
-                              Website Designing
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/packages/app">App Designing</NavLink>
-                          </li>
-                        </ul>
-                      </li>
-                    ) : null}
+
+                    <li className="menu-item-has-children">
+                      <NavLink to="/packages/storywriting">Packages</NavLink>
+                      <ul className="sub-menu">
+                        <li>
+                          <NavLink to="/packages/storywriting">
+                            Story writing for kids
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/packages/bookdesigning">
+                            Children’s book designing
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/packages/bookdesigning">
+                            Book Layout Design
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/packages/publishingonamazon">
+                            Perfectly Publishing on Amazon KDP
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/packages/youtubevideocreation">
+                            YouTube Video Content Creation
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/packages/videoanimation">
+                            Video Animation
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/packages/website">
+                            Website Designing
+                          </NavLink>
+                        </li>
+                        <li>
+                          <NavLink to="/packages/app">App Designing</NavLink>
+                        </li>
+                      </ul>
+                    </li>
+
                     {/* packages end */}
 
                     <li className="menu-item-has-children item-close">
@@ -134,7 +134,7 @@ const Navbar = () => {
                     <li className="menu-item-has-children item-close">
                       <NavLink to="contactus">Contact Us</NavLink>
                     </li>
-                    {isAuthenticated ? (
+                    {isAuthenticated && (
                       <li className="menu-item-has-children">
                         <NavLink to="/dashboard">Dashboard</NavLink>
                         <ul className="sub-menu">
@@ -151,7 +151,7 @@ const Navbar = () => {
                           </li>
                         </ul>
                       </li>
-                    ) : null}
+                    )}
                   </ul>
                 </div>
                 {isAuthenticated && (
@@ -225,7 +225,7 @@ const Navbar = () => {
                 <div className="appie-logo-box">
                   <NavLink to="/">
                     <img
-                      src="assets/images/logo.png"
+                      src="assets/images/logo-dark.png "
                       alt="logo-png"
                       style={{ height: 64 }}
                     />

@@ -29,32 +29,30 @@ function Order() {
     }
   }, []);
 
-  const SaveData = useCallback(
-    async (row) => {
-      setLoading(true);
-      try {
-        const response = await axios.put(
-          `orders/api/status/${row.original._id}`,
-          row.original
-        );
-        const { success, message } = response.data;
+  const SaveData = useCallback(async (row) => {
+    setLoading(true);
 
-        if (success) {
-          fetchOrders();
-          toast.success(message, {
-            position: toast.POSITION.TOP_RIGHT,
-          });
-        }
-        setLoading(false);
-      } catch (error) {
-        setLoading(false);
-        toast.error(error.message, {
+    try {
+      const response = await axios.put(
+        `orders/api/status/${row.original._id}`,
+        row.original
+      );
+      const { success, message } = response.data;
+
+      if (success) {
+        // fetchOrders();
+        toast.success(message, {
           position: toast.POSITION.TOP_RIGHT,
         });
       }
-    },
-    [fetchOrders]
-  );
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+      toast.error(error.message, {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+    }
+  }, []);
 
   // Create an editable cell renderer
 

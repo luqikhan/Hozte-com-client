@@ -249,7 +249,7 @@ const Dashboard = () => {
           )}
         </div>
         <div className="mt-90">
-          <h4 className="mb-5">Messages List</h4>
+          <h4 className="mb-5">Contact Messages List</h4>
           {loading ? (
             <div className="d-flex justify-content-center align-items-center">
               <Spinner />

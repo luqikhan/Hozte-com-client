@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import axios from "../utils/axios";
 import setToken from "../utils/token";
-import { useNavigate, Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
 function Login() {
   const navigate = useNavigate();
+  const isAuthenticated = localStorage.getItem("token");
+
   const userInfo = {
     email: "",
     password: "",
@@ -19,6 +21,12 @@ function Login() {
       .required("Email is required"),
     password: Yup.string().required("Password is required!"),
   });
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/");
+    }
+  }, [isAuthenticated, navigate]);
 
   return (
     <section className="contact-section">

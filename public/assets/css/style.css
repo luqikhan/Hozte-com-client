@@ -2037,14 +2037,14 @@ p {
 
 .appie-hero-area.appie-hero-3-area .appie-hero-content .appie-title {
     color: #fff;
-    font-size: 70px;
+    font-size: 64px;
     line-height: 80px;
     padding: 0 80px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
     .appie-hero-area.appie-hero-3-area .appie-hero-content .appie-title {
-        font-size: 54px;
+        font-size: 50px;
         line-height: 64px;
     }
 }
@@ -2355,8 +2355,8 @@ p {
 }
 
 .appie-hero-content .appie-title {
-    font-size: 60px;
-    line-height: 70px;
+    font-size: 54px;
+    line-height: 60px;
     margin-top: 10px;
     margin-bottom: 22px;
 }
@@ -3930,6 +3930,55 @@ p {
         line-height: 40px;
     }
 }
+
+
+
+
+/* Faqs page start */
+.appie-traffic-title1 {
+    /* padding-right: 220px; */
+    margin-bottom: 43px;
+}
+
+@media (max-width: 767px) {
+    .appie-traffic-title1 {
+        padding-right: 0;
+    }
+}
+
+.appie-traffic-title1 span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2b70fa;
+}
+
+.appie-traffic-title1 .title1 {
+    font-size: 20px;
+    line-height: 54px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .appie-traffic-title1 .title1 {
+        font-size: 20px;
+        line-height: 46px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .appie-traffic-title1 .title1 {
+        font-size: 20px;
+        line-height: 46px;
+    }
+}
+
+@media (max-width: 767px) {
+    .appie-traffic-title1 .title1 {
+        font-size: 18px;
+        line-height: 28px;
+        padding-bottom: 8px;
+    }
+}
+/* Faqs page end */
 
 .appie-traffic-service {
     position: relative;
@@ -7080,7 +7129,7 @@ blockquote cite {
 
 .appie-signup-box .title {
     font-size: 46px;
-    color: #fff;
+    color: #fff;    
     padding-bottom: 20px;
 }
 

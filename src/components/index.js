@@ -23,6 +23,8 @@ import PreLoader from "./PreLoad/Loader";
 import Spinner from "./Spinner/Spinner";
 import ScrollToTop from "./ScrollToTop";
 import Faqs1 from "./FAQ/Faqs1";
+import ContactCard from "./Features/ContactCard";
+
 
 export {
   Navbar,
@@ -50,4 +52,5 @@ export {
   WhatsappButton,
   ScrollToTop,
   Faqs1,
+  ContactCard
 };

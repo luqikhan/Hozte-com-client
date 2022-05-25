@@ -7,6 +7,9 @@ import { ScrollToTop } from "./components";
 
 function App() {
   toast.configure();
+  const isAuthenticated = localStorage.getItem("token");
+
+  React.useEffect(() => {}, [isAuthenticated]);
 
   return (
     <div className="App">

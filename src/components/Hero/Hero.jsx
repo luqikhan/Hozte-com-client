@@ -10,11 +10,11 @@ const Hero = () => {
             <div className="appie-hero-content">
               <span>Welcome To Hozte</span>
               <h1 className="appie-title">
-                Find a Hoztewriter for Your Next Book.
+                We are committed to offering you our best services.
               </h1>
               <p>
-                Are you looking to hire a content writer to write a book? Trust
-                our professional hoztewriter with your story.
+                The right and best choice for you is well organized, creative,
+                and high-quality multi-service provider company.
               </p>
               <ul>
                 <li>
