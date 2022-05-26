@@ -11,7 +11,11 @@ const Footer = () => {
             <div className="footer-about-widget">
               <div className="logo">
                 <Link to="/">
-                  <img src="assets/images/logo-dark.png" alt="" />
+                  <img
+                    src="assets/images/logo-dark.png"
+                    alt=""
+                    style={{ width: 121, height: 30 }}
+                  />
                 </Link>
               </div>
               <p>

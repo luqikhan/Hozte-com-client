@@ -225,9 +225,9 @@ const Navbar = () => {
                 <div className="appie-logo-box">
                   <NavLink to="/">
                     <img
-                      src="assets/images/logo-dark.png "
+                      src="assets/images/logo-dark.png"
                       alt="logo-png"
-                      style={{ height: 64 }}
+                      style={{ width: 121, height: 30 }}
                     />
                   </NavLink>
                 </div>
